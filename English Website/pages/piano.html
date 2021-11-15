@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>The Joy Luck Club</title>
+    <link rel = "icon" href = "assets/img/GoldenGateBridgeIcon.png" type = "image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A corporate Bootstrap theme by Medium Rare">
+    <link href="assets/css/loaders/loader-typing.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="assets/css/theme-saas-trend.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="preload" as="font" href="assets/fonts/Inter-UI-upright.var.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="assets/fonts/Inter-UI.var.woff2" type="font/woff2" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div class="loader">
+      <div class="loading-animation"></div>
+    </div>
+
+    <div class="navbar-container bg-primary">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary" data-sticky="top">
+        <div class="container">
+          <a class="navbar-brand fade-page" href="index.html">
+              <img src="assets/img/GoldenGateBridgeIcon.png" class="customIcon" alt="Leap"></img>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <img class="icon navbar-toggler-open" src="assets/img/icons/interface/menu.svg" alt="menu interface icon" data-inject-svg />
+            <img class="icon navbar-toggler-close" src="assets/img/icons/interface/cross.svg" alt="cross interface icon" data-inject-svg />
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <div class="py-2 py-lg-0">
+              <ul class="navbar-nav">
+                  <a href="index.html" class="nav-link" aria-expanded="false" aria-haspopup="true">About Me</a>
+                  <a href="community.html" class="nav-link" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">My Community</a>
+                  <a href="ambitions.html" class="nav-link" aria-expanded="false" aria-haspopup="true">My Ambitions</a>
+                  <a href="piano.html" class="nav-link" aria-expanded="false" aria-haspopup="true">Piano</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+    <section class="min-vh-100-light py-5">
+      <div class="container">
+        <div class="container">
+          <div class="row pt-5 py-5 text-center justify-content-center align-items-center layer-2">
+            <div class="col-xl-8 col-lg-10">
+              <h1 class="display-4">Play the Piano</h1>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row align-items-center justify-content-around">
+            <div class="col-md-5 pr-xl-4 mb-4 mb-md-0">
+              <div class="lead mb-4">Try playing the piano below. Mr. Chong, who I called Old Chong, taught me how to play. Though deaf, he was a great teacher, I was just a terrible student and I hated piano. After my mother's death, I had a newfound appreciation for the piano she had gifted me as a child. Try playing the piano yourself!</div>
+            </div>
+            <div class="col-xl-5 col-md-6" data-aos="fade-left">
+              <audio id="songAudio1">
+                <source src="assets/audio/Perfectly Contented.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+
+              <audio id="songAudio2">
+                <source src="assets/audio/Pleading Child.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+
+              <div class="container">
+                <div class="row min-vh-50" style="width: 150%; padding-top: 20%;">
+                  <div class="col-lg-6 text-center text-lg-left mb-4 mb-lg-0">
+                    <div class="pr-xl-4 mb-4 mb-md-0 text-center">
+                      <div class="mb-4 mb-md-0">
+                        <div class="lead mb-4"><strong>"Perfectly Contented"<br>Robert Schumann</strong></div>
+                      </div>
+                      <a onclick="playSong1()" class="btn btn-lg playButton" id="song1Button" style="color: white">Play</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 text-center" data-aos="fade-left">
+                    <div class="pr-xl-4 mb-4 mb-md-0 text-center">
+                      <div class="mb-4 mb-md-0">
+                        <div class="lead mb-4"><strong>"Pleading Child"<br>Robert Schumann</strong></div>
+                      </div>
+                      <a onclick="playSong2()" class="btn btn-lg playButton" id="song2Button" style="color: white">Play</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center justify-content-center align-items-center mb-md-6 piano">
+                <h3 class="h1 nowplaying">Current Key: </h3>
+              <div class="keys">
+                <div data-key="65" class="key" data-note="C">
+                    <span class="hints">A</span>
+                </div>
+                <div data-key="87" class="key sharp" data-note="C#">
+                    <span class="hints">W</span>
+                </div>
+                <div data-key="83" class="key" data-note="D">
+                    <span class="hints">S</span>
+                </div>
+                <div data-key="69" class="key sharp" data-note="D#">
+                    <span class="hints">E</span>
+                </div>
+                <div data-key="68" class="key" data-note="E">
+                    <span class="hints">D</span>
+                </div>
+                <div data-key="70" class="key" data-note="F">
+                    <span class="hints">F</span>
+                </div>
+                <div data-key="84" class="key sharp" data-note="F#">
+                    <span class="hints">T</span>
+                </div>
+                <div data-key="71" class="key" data-note="G">
+                    <span class="hints">G</span>
+                </div>
+                <div data-key="89" class="key sharp" data-note="G#">
+                    <span class="hints">Y</span>
+                </div>
+                <div data-key="72" class="key" data-note="A">
+                    <span class="hints">H</span>
+                </div>
+                <div data-key="85" class="key sharp" data-note="A#">
+                    <span class="hints">U</span>
+                </div>
+                <div data-key="74" class="key" data-note="B">
+                    <span class="hints">J</span>
+                </div>
+                <div data-key="75" class="key" data-note="C">
+                    <span class="hints">K</span>
+                </div>
+                <div data-key="79" class="key sharp" data-note="C#">
+                    <span class="hints">O</span>
+                </div>
+                <div data-key="76" class="key" data-note="D">
+                    <span class="hints">L</span>
+                </div>
+                <div data-key="80" class="key sharp" data-note="D#">
+                    <span class="hints">P</span>
+                </div>
+                <div data-key="186" class="key" data-note="E">
+                    <span class="hints">;</span>
+                </div>
+              </div>
+        
+              <audio data-key="65" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
+              <audio data-key="87" src="http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav"></audio>
+              <audio data-key="83" src="http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"></audio>
+              <audio data-key="69" src="http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav"></audio>
+              <audio data-key="68" src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav"></audio>
+              <audio data-key="70" src="http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav"></audio>
+              <audio data-key="84" src="http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav"></audio>
+              <audio data-key="71" src="http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav"></audio>
+              <audio data-key="89" src="http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav"></audio>
+              <audio data-key="72" src="http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav"></audio>
+              <audio data-key="85" src="http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav"></audio>
+              <audio data-key="74" src="http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav"></audio>
+              <audio data-key="75" src="http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav"></audio>
+              <audio data-key="79" src="http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav"></audio>
+              <audio data-key="76" src="http://carolinegabriel.com/demo/js-keyboard/sounds/054.wav"></audio>
+              <audio data-key="80" src="http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav"></audio>
+              <audio data-key="186" src="http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav"></audio>
+        </div>
+      </div>
+    </section>
+
+    <footer class="pb-5 bg-primary text-light">
+      <div class="container">
+        <div class="row mb-4 justify-content-center">
+          <div class="col-auto">
+            <a href="index.html">
+              <h1 style="color: white;">Home</h1>
+            </a>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col">
+            <ul class="nav justify-content-center">
+              <li class="nav-item"><a href="index.html" class="nav-link">About Me</a>
+              </li>
+              <li class="nav-item"><a href="community.html" class="nav-link">My Community</a>
+              </li>
+              <li class="nav-item"><a href="ambitions.html" class="nav-link">My Ambitions</a>
+              </li>
+              <li class="nav-item"><a href="piano.html" class="nav-link">Piano</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row justify-content-center text-center">
+          <div class="col-xl-10">
+            <small class="text-muted">&copy;2021 All Rights Reserved Anuj Naik, Wilkinson, English 10H</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#" class="btn back-to-top btn-primary btn-round" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
+      <img class="icon" src="assets/img/icons/theme/navigation/arrow-up.svg" alt="arrow-up icon" data-inject-svg />
+    </a>
+
+    <script type="text/javascript" src="assets/js/customscript.js"></script>
+
+    <!-- Required vendor scripts (Do not remove) -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+
+    <!-- Optional Vendor Scripts (Remove the plugin script here and comment initializer script out of index.js if site does not use that feature) -->
+
+    <!-- AOS (Animate On Scroll - animates elements into view while scrolling down) -->
+    <script type="text/javascript" src="assets/js/aos.js"></script>
+    <!-- Clipboard (copies content from browser into OS clipboard) -->
+    <script type="text/javascript" src="assets/js/clipboard.js"></script>
+    <!-- Fancybox (handles image and video lightbox and galleries) -->
+    <script type="text/javascript" src="assets/js/jquery.fancybox.min.js"></script>
+    <!-- Flatpickr (calendar/date/time picker UI) -->
+    <script type="text/javascript" src="assets/js/flatpickr.min.js"></script>
+    <!-- Flickity (handles touch enabled carousels and sliders) -->
+    <script type="text/javascript" src="assets/js/flickity.pkgd.min.js"></script>
+    <!-- Ion rangeSlider (flexible and pretty range slider elements) -->
+    <script type="text/javascript" src="assets/js/ion.rangeSlider.min.js"></script>
+    <!-- Isotope (masonry layouts and filtering) -->
+    <script type="text/javascript" src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- jarallax (parallax effect and video backgrounds) -->
+    <script type="text/javascript" src="assets/js/jarallax.min.js"></script>
+    <script type="text/javascript" src="assets/js/jarallax-video.min.js"></script>
+    <script type="text/javascript" src="assets/js/jarallax-element.min.js"></script>
+    <!-- jQuery Countdown (displays countdown text to a specified date) -->
+    <script type="text/javascript" src="assets/js/jquery.countdown.min.js"></script>
+    <!-- jQuery smartWizard facilitates steppable wizard content -->
+    <script type="text/javascript" src="assets/js/jquery.smartWizard.min.js"></script>
+    <!-- Plyr (unified player for Video, Audio, Vimeo and Youtube) -->
+    <script type="text/javascript" src="assets/js/plyr.polyfilled.min.js"></script>
+    <!-- Prism (displays formatted code boxes) -->
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <!-- ScrollMonitor (manages events for elements scrolling in and out of view) -->
+    <script type="text/javascript" src="assets/js/scrollMonitor.js"></script>
+    <!-- Smooth scroll (animation to links in-page)-->
+    <script type="text/javascript" src="assets/js/smooth-scroll.polyfills.min.js"></script>
+    <!-- SVGInjector (replaces img tags with SVG code to allow easy inclusion of SVGs with the benefit of inheriting colors and styles)-->
+    <script type="text/javascript" src="assets/js/svg-injector.umd.production.js"></script>
+    <!-- TwitterFetcher (displays a feed of tweets from a specified account)-->
+    <script type="text/javascript" src="assets/js/twitterFetcher_min.js"></script>
+    <!-- Typed text (animated typing effect)-->
+    <script type="text/javascript" src="assets/js/typed.min.js"></script>
+    <!-- Required theme scripts (Do not remove) -->
+    <script type="text/javascript" src="assets/js/theme.js"></script>
+    <!-- Removes page load animation when window is finished loading -->
+    <script type="text/javascript">
+      window.addEventListener("load", function () {    document.querySelector('body').classList.add('loaded');  });
+    </script>
+
+  </body>
+
+</html>
