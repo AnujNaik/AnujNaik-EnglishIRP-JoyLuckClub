@@ -150,7 +150,7 @@ h2 {
   float: left;
   width: 10%;
   height: 100%;
-  background: rgba(255, 255, 255, .8);    
+  background: linear-gradient(to right, #5e5e5e -35%,   #ffffff 113%);
 }
 
 .key.sharp {
@@ -213,4 +213,8 @@ h2 {
 
 .playButton {
     background-color: hsl(0, 0%, 0%);
+}
+
+.playButton:hover {
+  background-color: hsl(0, 0%, 31%);
 }
